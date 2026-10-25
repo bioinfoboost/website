@@ -1,6 +1,7 @@
 baseURL = 'https://bioinfoboost.com/'
 locale = 'zh-cn'
 title = '北京生信助力科技有限公司'
+disableKinds = ["taxonomy", "term"]
 
 [params]
   # Host that GitHub Pages and any other deployment must redirect to.
