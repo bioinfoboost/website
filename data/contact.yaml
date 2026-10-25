@@ -8,7 +8,7 @@ contact:
   email:
     title: "邮箱联系"
     icon: "fas fa-envelope"
-    content: "<a href='mailto:hi@bioinfoboost.com'>hi@bioinfoboost.com</a>"
+    content: "<a href='mailto:contact@bioinfoboost.com'>contact@bioinfoboost.com</a>"
   
   phone:
     title: "业务咨询"
