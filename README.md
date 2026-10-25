@@ -61,7 +61,7 @@ static/
 hugo.toml         # 站点配置（baseURL/title/description/email/address/keywords）
 vite.config.mjs   # 前端构建配置（产物输出到 static/assets/）
 package.json      # npm 依赖与脚本
-CNAME             # 自定义域名（bioinfo.app）
+CNAME             # 自定义域名（bioinfoboost.com）
 ```
 
 ## 设计说明
