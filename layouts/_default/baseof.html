@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    {{ partial "redirect-host.html" . }}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }} - 生物信息学分析与软件开发</title>
 
@@ -9,7 +10,7 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     <meta name="author" content="{{ .Site.Params.author }}">
-    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="canonical" href="https://{{ .Site.Params.canonicalHost }}{{ .RelPermalink }}">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{{ .Site.Title }}">

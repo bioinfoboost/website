@@ -58,7 +58,7 @@ static/
 
 ### 根目录配置文件
 ```
-hugo.toml         # 站点配置（baseURL/title/description/email/address/keywords）
+hugo.toml         # 站点配置（baseURL/canonicalHost/title/description/email/address/keywords）
 vite.config.mjs   # 前端构建配置（产物输出到 static/assets/）
 package.json      # npm 依赖与脚本
 CNAME             # 自定义域名（bioinfoboost.com）
@@ -80,6 +80,12 @@ CNAME             # 自定义域名（bioinfoboost.com）
 - 前端资源由 Vite 构建到 `static/assets/`（已 gitignore，勿直接编辑）
 - 依赖本地化：Bootstrap、Font Awesome 均从 npm 打包，无外部 CDN 依赖
 - 中文字体使用系统字体栈（macOS/iOS: PingFang SC，Windows: Microsoft YaHei，Linux: Noto Sans CJK SC 等），不加载外部字体
+
+### 4. 域名跳转
+- 站点只以 `https://bioinfoboost.com/` 对外提供内容
+- 其他域名（如 `bioinfo.app`、`*.github.io`）由 `layouts/partials/redirect-host.html` 在 `<head>` 内立即跳转到规范域名，保留 path、查询串与锚点
+- 规范域名配置在 `hugo.toml` 的 `[params] canonicalHost`
+- 本地预览（localhost / 127.0.0.1 / file://）不跳转
 
 ## 使用说明
 

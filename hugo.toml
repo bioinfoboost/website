@@ -3,6 +3,8 @@ locale = 'zh-cn'
 title = '北京生信助力科技有限公司'
 
 [params]
+  # Host that GitHub Pages and any other deployment must redirect to.
+  canonicalHost = "bioinfoboost.com"
   description = "北京生信助力科技有限公司专注于检测软件系统开发、多组学分析与机器学习应用，为试剂公司、科研机构和医疗机构提供生物信息学解决方案与智能文献分析服务。"
   author = "北京生信助力科技有限公司"
   email = "hi@bioinfoboost.com"

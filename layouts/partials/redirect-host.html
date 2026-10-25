@@ -1,0 +1,23 @@
+{{- /* GitHub Pages answers on several hosts (the custom domain, and the
+       *.github.io default), and only one of them may serve canonical content.
+       The redirect runs inline in <head> so the browser never paints the
+       wrong-host page, and keeps path, query and hash intact. */ -}}
+{{- $canonicalHost := .Site.Params.canonicalHost -}}
+<script>
+  (function () {
+    var canonicalHost = "{{ $canonicalHost }}";
+    if (!canonicalHost) {
+      return;
+    }
+    var host = location.hostname.toLowerCase();
+    if (host === canonicalHost) {
+      return;
+    }
+    // Local previews must stay put.
+    if (host === "localhost" || host === "127.0.0.1" || host === "[::1]" || location.protocol === "file:") {
+      return;
+    }
+    location.replace("https://" + canonicalHost + location.pathname + location.search + location.hash);
+  })();
+</script>
+</head>
