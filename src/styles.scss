@@ -557,6 +557,13 @@ p {
   color: var(--primary-dark);
 }
 
+.beian-icon {
+  height: 20px;
+  width: auto;
+  margin-right: 4px;
+  vertical-align: -0.35em;
+}
+
 // Responsive Design
 @media (max-width: 768px) {
   .jumbotron h1 {
